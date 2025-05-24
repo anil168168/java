@@ -3,25 +3,26 @@ public class Employee {
     private int id;
     private double salary;
     private String department;
-    private int phone no;
-    public Employee(String name, int id, double salary, String department,int phone no) {
+    private long phoneNo;
+
+    public Employee(String name, int id, double salary, String department, long phoneNo) {
         this.name = name;
         this.id = id;
         this.salary = salary;
         this.department = department;
-        this.phone no = phone no;
-
+        this.phoneNo = phoneNo;
     }
-    public void dispay() {
+
+    public void display() {
         System.out.println("Employee Name: " + name);
         System.out.println("Employee ID: " + id);
         System.out.println("Salary: " + salary);
         System.out.println("Department: " + department);
-        System.out.println("phone no: " + phone no);
-
+        System.out.println("Phone No: " + phoneNo);
     }
+
     public static void main(String[] args) {
-        Employee emp = new Employee("John Doe", 12345, 50000.0, "Engineering",7996993803);
-        emp.dispay();
+        Employee emp = new Employee("John Doe", 12345, 50000.0, "Engineering", 7996993803L);
+        emp.display();
     }
 }
